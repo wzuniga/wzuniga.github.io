@@ -1,0 +1,38 @@
+.navigationContainer > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.navigationContainer > ul > li {
+    float: right;
+}
+
+.navigationContainer > ul > li > a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px 5px 16px;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.navigationContainer > ul > li > a:hover, a:focus {
+    background-size: 100% 2px;
+    color: #16a085;
+}
+
+.navigationContainerExternal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}

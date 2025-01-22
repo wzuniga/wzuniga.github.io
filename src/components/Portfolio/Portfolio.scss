@@ -1,0 +1,71 @@
+.firstPortfolio {
+    padding-top: 100px;
+}
+
+.innerBoxPortfolio {
+    display: flex;
+}
+
+.portfolioContainer {
+    /*width: 70vw;
+    height: 70vh;*/
+    padding: 15vh 15vw 15vh 15vw;
+    color: white;
+}
+
+.portfolio-heading {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: 35px;
+    white-space: nowrap;
+    color: white;
+    font-family: "Lato", sans-serif;
+}
+
+.portfolio-heading::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 2px;
+    margin-left: 20px;
+    background-color: #16a085;
+}
+
+.imageCarousel {
+    height: 60vh;
+}
+
+.carouselContainer {
+    width: 50vw;
+    height: 60vh;
+    margin-left: 10%;
+}
+
+.carouselContainerRight {
+    width: 50vw;
+    height: 60vh;
+    margin-right: 10%;
+}
+
+.carouselContainerLeft {
+    width: 50vw;
+    height: 60vh;
+    margin-left: 10%;
+}
+
+.infoCarousel {
+    max-width: 20%;
+}
+
+.listInfoProject {
+    margin-top: 50px;
+}
+
+.sublistInfoProject {
+    margin-top: 20px;
+}

@@ -1,0 +1,59 @@
+.leaflet-container {
+    width: 100%;
+    z-index: 1;
+}
+
+.rigthContact {
+    width: 40%;
+    float: left;
+    height: 100vh;
+    background-color: rgb(34, 34, 34);
+    padding: 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
+.leftContact {
+    width: "53%";
+    float: "left";
+}
+
+.showMapType {
+    right: 0px;
+    position: fixed;
+    bottom: 0px;
+    color: white;
+}
+
+.typographySwitch {
+    display: inline;
+    margin-right: 10px!important;
+}
+
+.contactSection {
+    margin-left: 40%;
+    padding: 50px;
+}
+
+.h1Contact {
+    font-size: 60px;
+    color: white;
+    margin: 0px;
+}
+
+.typoContact {
+    padding-left: 40px;
+    color: white;
+}
+
+.codeStyle {
+    color: #747474;
+    left: 4rem;
+    font-style: italic;
+    font-size: 1.2rem;
+    font-family: 'La Belle Aurore',cursive;
+}
+

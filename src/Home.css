@@ -1,0 +1,68 @@
+.generalContainer {
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+  background-color: #2c3133;
+}
+
+.showHome {
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  overflow: hidden;
+}
+
+.containerInitial {
+  height: 92vh;
+  background-color: #2c3133;
+}
+
+.containerGeneral {
+  height: 100vh;
+}
+
+.mailComponent {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: auto;
+  right: 40px;
+  z-index: 10;
+  color: #16a085;
+  font-family: "Lato", sans-serif;
+}
+
+.innerMailComponent {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.aMailComponent {
+  margin: 20px auto;
+  padding: 10px;
+  letter-spacing: 0.1em;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+}
+
+.innerMailComponent::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 120px;
+  margin: 0px auto;
+  background-color: #16a085;
+}
+
+.aMailComponent:hover {
+  color: rgb(211, 210, 210);
+}
