@@ -1,5 +1,6 @@
 .greeting__container {
-    width: 90%;
+    width: 100%;
+    max-width: 1900px;
     margin: 0 auto;
     color: #ecf0f1;
     position: absolute;
@@ -8,22 +9,47 @@
     transform: translate(-50%, -50%);
     font-family: 'Lato', sans-serif;
     font-weight: 600;
-    height: 110px;
-    vertical-align: middle;
+    height: auto;
     text-align: center;
-    font-size: 70px;
-    
+    font-size: 5vw;
+    padding: 20px;
+    box-sizing: border-box;
+
     &__object {
         display: inline;
         color: #16a085;
+        font-size: 5vw;
     }
 
     &__text {
         position: relative;
         display: inline;
         vertical-align: middle;
-        top: -5%;
-        font-size: 70px;
-        padding: 0px 30px;
+        font-size: 5vw;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .greeting__container {
+        font-size: 8vw;
+    }
+
+    .greeting__container__object, 
+    .greeting__container__text {
+        font-size: 8vw;
+        padding: 0 2vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .greeting__container {
+        font-size: 10vw;
+    }
+
+    .greeting__container__object, 
+    .greeting__container__text {
+        font-size: 10vw;
+        padding: 0 1vw;
     }
 }

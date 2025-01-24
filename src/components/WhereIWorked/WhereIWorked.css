@@ -1,12 +1,9 @@
-.workedContainer{
-    /*width: 70vw;
-    height: 50vh;*/
+.workedContainer {
     padding: 30vh 15vw 25vh 15vw;
 }
 
 .numbered-heading {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     position: relative;
     margin: 10px 0px 40px;
@@ -45,7 +42,6 @@
     text-decoration-skip-ink: auto;
     position: relative;
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     width: 100%;
     height: 40px;
@@ -87,6 +83,7 @@
     color: rgb(211, 210, 210);
     font-family: "Lato", sans-serif;
     padding-left: 100px;
+    flex-grow: 1;
 }
 
 .h3Info {
@@ -135,4 +132,22 @@
     color: #16a085;
     margin-bottom: 15px;
     background-color: #638f863a;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .innerBox {
+        flex-direction: column;
+    }
+
+    .buttonOption {
+        padding: 0px 20px 2px 30px;
+    }
+
+    .infoContainer {
+        padding-left: 0;
+        padding-top: 20px;
+        border-top: 1px solid #16a085;
+        margin-top: 40px;
+    }
 }

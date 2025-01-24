@@ -14,6 +14,9 @@ function Home({ passInitial, sendTrackBack }) {
       <Navigation sendTrackBack={sendTrackBack}/>
       
       <div className="containerInitial" id="home">
+        <div className="announcement">
+          🚧 This page is still under construction. Stay tuned for updates! 🚧
+        </div>
         <InitialGreeting />
         <SocialLinks />
       </div>

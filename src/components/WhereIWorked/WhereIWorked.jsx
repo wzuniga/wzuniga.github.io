@@ -8,11 +8,37 @@ function WhereIWorked() {
 
   const workInfoDict = [
     {
-      company: "Infobox Latinoamerica",
-      position: "Java | Reactjs FullStack Developer",
-      place: "Lima, Perú",
-      from: "March 2021",
-      to: "November 2022",
+      company: "Scanntech",
+      position: "Java-Angular Full-Stack Developer",
+      place: "Montevideo, Uruguay",
+      from: "April 2023",
+      to: "Present",
+      specifications: [
+        "Development of web applications, implementation of features, application maintenance, performance improvement in frontend and backend",
+        "Continuous deployment using Gitlab software",
+        "Use of agile methodologies in development"
+      ],
+      tools: ["Java Spring Boot", "Angular (TypeScript)", "GIT", "SCRUM", "Figma"]
+    },
+    {
+      company: "Zoluxiones (Scotiabank)",
+      position: "Java-ReactJS Full-Stack Developer",
+      place: "Santiago, Chile",
+      from: "February 2022",
+      to: "April 2023",
+      specifications: [
+        "Development and migration of microservices in Scotiabank Chile",
+        "Management of microframeworks and REST queries",
+        "Integration with security and authentication management between microservices and frontend"
+      ],
+      tools: ["Java Spring Boot", "ReactJS (JS y TypeScript)", "Canva", "Material Design", "GIT", "Microservices"]
+    },
+    {
+      company: "Infobox Latinoamerica (Nubedian)",
+      position: "Java | ReactJs FullStack Developer",
+      place: "Karlsruhe, Alemania",
+      from: "February 2021",
+      to: "February 2022",
       specifications: [
         "Development of an integration system for different health institutions in Germany",
         "Development of the pilot ICU bed management system for the Peruvian Ministry of Health",

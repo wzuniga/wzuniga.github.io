@@ -8,7 +8,7 @@ function SocialLinks() {
     return (
         <div className="social__container">
             <a
-                href="https://www.linkedin.com/in/walter-danilo-zu%C3%B1iga-herrera-2637b2129/"
+                href="https://www.linkedin.com/in/wzunigah"
                 target = "_blank"
                 rel="noopener noreferrer"
             >

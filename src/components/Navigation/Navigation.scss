@@ -5,10 +5,15 @@
     overflow: hidden;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .navigationContainer > ul > li {
-    float: right;
+    float: none;
+    margin: 0 10px;
 }
 
 .navigationContainer > ul > li > a {
@@ -35,4 +40,15 @@
     right: 0;
     width: 100%;
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .navigationContainer > ul > li:not(:first-child) {
+        display: none;
+    }
+
+    .navigationContainer > ul {
+        justify-content: center;
+        width: 100%;
+    }
 }

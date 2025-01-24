@@ -4,11 +4,12 @@
 
 .innerBoxPortfolio {
     display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: center; /* Centrar los elementos en pantallas pequeñas */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
 
 .portfolioContainer {
-    /*width: 70vw;
-    height: 70vh;*/
     padding: 15vh 15vw 15vh 15vw;
     color: white;
 }
@@ -41,25 +42,19 @@
 }
 
 .carouselContainer {
-    width: 50vw;
-    height: 60vh;
-    margin-left: 10%;
-}
-
-.carouselContainerRight {
-    width: 50vw;
-    height: 60vh;
-    margin-right: 10%;
-}
-
-.carouselContainerLeft {
-    width: 50vw;
-    height: 60vh;
-    margin-left: 10%;
+    width: 50%; /* Ancho estándar */
+    flex: 1 1 300px; /* Comportamiento flexible: mínimo de 300px */
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .infoCarousel {
-    max-width: 20%;
+    max-width: 90%; /* Ajustar ancho */
+    flex: 1 1 300px; /* Comportamiento flexible: mínimo de 300px */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: justify; /* Justificar texto */
 }
 
 .listInfoProject {
@@ -68,4 +63,26 @@
 
 .sublistInfoProject {
     margin-top: 20px;
+}
+
+/* Media queries para ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .infoCarousel, .carouselContainer {
+        width: 100%; /* Ocupan todo el ancho */
+        text-align: justify; /* Justificar contenido */
+    }
+
+    .infoCarousel ul {
+        padding: 0; /* Reducir espacios innecesarios */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-heading {
+        font-size: 28px; /* Reducir el tamaño de fuente */
+    }
+
+    .imageCarousel {
+        height: 40vh; /* Reducir la altura del carrusel */
+    }
 }
