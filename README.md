@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the source code for my personal portfolio website.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [Dependencies](#dependencies)
+- [DevDependencies](#devdependencies)
+
+## Installation
+
+To install the dependencies, run:
+
+```sh
+npm install
+```
 
 ## Available Scripts
 
@@ -14,57 +30,55 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm test`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `npm run deploy`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Builds the app and deploys it to GitHub Pages. Make sure to set the `homepage` field in `package.json` to `"https://wzuniga.github.io"`.
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To deploy the app to GitHub Pages, run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+npm run deploy
+```
 
-### Code Splitting
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `@coreui/coreui`: ^4.2.6
+- `@coreui/react`: ^4.5.2
+- `@emotion/react`: ^11.10.5
+- `@emotion/styled`: ^11.10.5
+- `@mui/icons-material`: ^5.4.4
+- `@mui/material`: ^5.4.4
+- `@testing-library/jest-dom`: ^5.17.0
+- `@testing-library/react`: ^14.0.0
+- `@testing-library/user-event`: ^14.4.3
+- `d3`: ^7.8.2
+- `react`: ^18.3.1
+- `react-dom`: ^18.3.1
+- `react-draggable`: ^4.4.6
+- `react-router-dom`: ^7.1.3
+- `react-scripts`: 5.0.1
+- `react-simple-maps`: ^3.0.0
+- `sass`: ^1.58.1
+- `web-vitals`: ^2.1.4
 
-### Analyzing the Bundle Size
+## DevDependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `gh-pages`: ^6.3.0

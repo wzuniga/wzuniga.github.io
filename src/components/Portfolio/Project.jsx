@@ -1,10 +1,13 @@
 import React from "react";
-import { CCarousel } from '@coreui/react';
-import { CCarouselItem } from '@coreui/react';
-import { CImage } from '@coreui/react';
-import { CCarouselCaption } from '@coreui/react';
+import { CCarousel } from "@coreui/react";
+import { CCarouselItem } from "@coreui/react";
+import { CImage } from "@coreui/react";
+import { CCarouselCaption } from "@coreui/react";
+import "./Project.scss";
 
 function Project({ projectDict, firstPortfolio, position }) {
+  const isMobile = window.innerWidth <= 768;
+
   const details = (
     <div className="infoCarousel">
       <h2>{projectDict.name}</h2>
@@ -22,7 +25,7 @@ function Project({ projectDict, firstPortfolio, position }) {
 
   const carousel = (
     <div className="carouselContainer">
-      <CCarousel controls indicators>
+      <CCarousel controls indicators dark className="responsiveCarousel">
         {projectDict.images.map((image, index) => (
           <CCarouselItem key={`carouselContainer-project-${index}`}>
             <CImage
@@ -30,7 +33,7 @@ function Project({ projectDict, firstPortfolio, position }) {
               src={image.img}
               alt={`slide ${index + 1}`}
             />
-            <CCarouselCaption className="d-none d-md-block">
+            <CCarouselCaption className="d-none d-md-block captionCarousel">
               <h5>{image.description_1}</h5>
               <p>{image.description_2}</p>
             </CCarouselCaption>
@@ -44,8 +47,17 @@ function Project({ projectDict, firstPortfolio, position }) {
     <div
       className={`innerBoxPortfolio ${firstPortfolio ? "" : "firstPortfolio"}`}
     >
-      {position ? details : carousel}
-      {position ? carousel : details}
+      {isMobile ? (
+        <>
+          {details}
+          {carousel}
+        </>
+      ) : (
+        <>
+          {position ? details : carousel}
+          {position ? carousel : details}
+        </>
+      )}
     </div>
   );
 }

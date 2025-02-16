@@ -3,7 +3,7 @@
     max-width: 1900px;
     margin: 0 auto;
     color: #ecf0f1;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -14,6 +14,7 @@
     font-size: 5vw;
     padding: 20px;
     box-sizing: border-box;
+    cursor: pointer;
 
     &__object {
         display: inline;
@@ -28,6 +29,66 @@
         font-size: 5vw;
         padding: 5px;
     }
+}
+
+.greeting__container::before,
+.greeting__container::after,
+.corner-top-right,
+.corner-bottom-left {
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: white;
+    border: 1px solid #16a085;
+    box-sizing: border-box;
+    display: none;
+}
+
+.greeting__container:hover::before,
+.greeting__container:hover::after,
+.greeting__container:hover .corner-top-right,
+.greeting__container:hover .corner-bottom-left {
+    display: block;
+}
+
+.greeting__container::before {
+    top: -6px;
+    left: -6px;
+}
+
+.greeting__container::after {
+    bottom: -6px;
+    right: -6px;
+}
+
+.corner-top-right {
+    top: -6px;
+    right: -6px;
+}
+
+.corner-bottom-left {
+    bottom: -6px;
+    left: -6px;
+}
+
+.greeting__container:hover {
+    border: 1px solid #16a085;
+}
+
+.greeting__container:hover::before {
+    top: -6px;
+    left: -6px;
+}
+
+.greeting__container:hover::after {
+    bottom: -6px;
+    right: -6px;
+}
+
+.greeting__container:hover .corner-top-right,
+.greeting__container:hover .corner-bottom-left {
+    display: block;
 }
 
 @media (max-width: 768px) {

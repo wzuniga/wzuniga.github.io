@@ -43,7 +43,7 @@
 }
 
 @media (max-width: 768px) {
-    .navigationContainer > ul > li:not(:first-child) {
+    .navigationContainer > ul > li:not(:last-child) {
         display: none;
     }
 

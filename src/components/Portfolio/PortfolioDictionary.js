@@ -17,8 +17,28 @@ import Remasur2 from "../../img/remasur_2.png";
 import Remasur3 from "../../img/remasur_3.png";
 import Remasur4 from "../../img/remasur_4.png";
 import Remasur5 from "../../img/remasur_5.png";
+import Scraping1 from "../../img/scraping_1.png";
+import Scraping2 from "../../img/scraping_2.png";
+import Scraping3 from "../../img/scraping_3.png";
+import Scraping4 from "../../img/scraping_4.png";
+import Scraping5 from "../../img/scraping_5.png";
 
 const portfolioDict = [
+  {
+    name: "Scraping",
+    specifications: [
+      "System for the interconnection of patients with hospitals, nursing homes, rehabilitation centers in Germany.",
+      "Also developed for the Peruvian Ministry of Health, for ICU bed management.",
+      "I Contributed to the development of both front end and backend."
+    ],
+    images: [
+      { img: Scraping1 },
+      { img: Scraping2 },
+      { img: Scraping3 },
+      { img: Scraping4 },
+      { img: Scraping5 }
+    ]
+  },
   {
     name: "Caseform in Nubedian",
     specifications: [

@@ -15,7 +15,7 @@ function Home({ passInitial, sendTrackBack }) {
       
       <div className="containerInitial" id="home">
         <div className="announcement">
-          🚧 This page is still under construction. Stay tuned for updates! 🚧
+          <span>🚧 This page is still under construction. Stay tuned for updates! 🚧 V 1.2.4</span>
         </div>
         <InitialGreeting />
         <SocialLinks />
