@@ -1,5 +1,5 @@
 .greeting__container {
-    width: 100%;
+    width: 90%;
     max-width: 1900px;
     margin: 0 auto;
     color: #ecf0f1;
@@ -113,4 +113,12 @@
         font-size: 10vw;
         padding: 0 1vw;
     }
+}
+
+.day .greeting__container {
+    color: #364152;
+}
+
+.night .greeting__container {
+    color: #ecf0f1;
 }

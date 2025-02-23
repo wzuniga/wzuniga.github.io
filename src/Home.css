@@ -1,6 +1,16 @@
 .generalContainer {
   opacity: 0;
   transition: opacity 5s ease-in-out;
+  /* background-color: #2c3133; */
+}
+
+/* Background for day theme */
+.generalContainer.day {
+  background: linear-gradient(to right, rgba(245, 245, 245, 0.8), rgba(245, 245, 245, 0.8)) center center, url(../public/common-bg.svg);
+}
+
+/* Background for night theme */
+.generalContainer.night {
   background-color: #2c3133;
 }
 
@@ -15,7 +25,6 @@
 
 .containerInitial {
   height: 92vh;
-  background-color: #2c3133;
 }
 
 .containerGeneral {

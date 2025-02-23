@@ -7,13 +7,16 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import routesApp from './routes';
+import { ThemeProvider } from './ThemeContext';
 
 const router = createBrowserRouter(routesApp);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ThemeProvider>
       <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

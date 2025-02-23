@@ -14,6 +14,14 @@
     color: white;
 }
 
+.day .portfolioContainer {
+  color: inherit;
+}
+
+.night .portfolioContainer {
+  color: white;
+}
+
 .portfolio-heading {
     display: flex;
     -webkit-box-align: center;
@@ -35,6 +43,14 @@
     height: 2px;
     margin-left: 20px;
     background-color: #16a085;
+}
+
+.day .portfolio-heading {
+  color: #364152;
+}
+
+.night .portfolio-heading {
+  color: white;
 }
 
 .imageCarousel {

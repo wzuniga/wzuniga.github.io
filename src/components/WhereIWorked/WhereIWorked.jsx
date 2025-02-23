@@ -9,89 +9,90 @@ function WhereIWorked() {
   const workInfoDict = [
     {
       company: "Scanntech",
-      position: "Java-Angular Full-Stack Developer",
+      position: "Java-Angular Full-Stack Developer (SSR Advanced)",
       place: "Montevideo, Uruguay",
       from: "April 2023",
       to: "Present",
       specifications: [
-        "Development of web applications, implementation of features, application maintenance, performance improvement in frontend and backend",
-        "Continuous deployment using Gitlab software",
-        "Use of agile methodologies in development"
+        "Lead the design, development, and maintenance of scalable web applications, focusing on both frontend and backend optimizations.",
+        "Implement new features and improvements while conducting thorough code reviews and ensuring adherence to industry best practices.",
+        "Work closely with cross-functional teams in an Agile environment, designing intuitive user interfaces in Figma and ensuring seamless integration with development.",
+        "Utilize GitLab for continuous integration and deployment, Docker for containerization, and Postman for comprehensive API testing.",
+        "Mentor junior developers and contribute to architectural decision-making."
       ],
-      tools: ["Java Spring Boot", "Angular (TypeScript)", "GIT", "SCRUM", "Figma"]
+      tools: ["Java Spring Boot", "Angular (TypeScript)", "GitLab", "Docker", "Postman", "Figma", "SCRUM"]
     },
     {
       company: "Zoluxiones (Scotiabank)",
-      position: "Java-ReactJS Full-Stack Developer",
+      position: "Java-ReactJS Full-Stack Developer (Senior)",
       place: "Santiago, Chile",
       from: "February 2022",
       to: "April 2023",
       specifications: [
-        "Development and migration of microservices in Scotiabank Chile",
-        "Management of microframeworks and REST queries",
-        "Integration with security and authentication management between microservices and frontend"
+        "Developed and migrated microservices for Scotiabank Chile, ensuring secure authentication and seamless inter-service communication.",
+        "Architected and implemented RESTful APIs, driving technical decisions and establishing coding standards across the team.",
+        "Coordinated cross-functional teams and mentored developers, ensuring timely delivery and high-quality code in an Agile environment."
       ],
-      tools: ["Java Spring Boot", "ReactJS (JS y TypeScript)", "Canva", "Material Design", "GIT", "Microservices"]
+      tools: ["Java Spring Boot", "ReactJS (TypeScript)", "Docker", "JIRA", "Swagger", "Postman"]
     },
     {
-      company: "Infobox Latinoamerica (Nubedian)",
-      position: "Java | ReactJs FullStack Developer",
-      place: "Karlsruhe, Alemania",
+      company: "Infobox (Nubedian)",
+      position: "Java-ReactJS Full-Stack Developer (SSR)",
+      place: "Karlsruhe, Germany",
       from: "February 2021",
       to: "February 2022",
       specifications: [
-        "Development of an integration system for different health institutions in Germany",
-        "Development of the pilot ICU bed management system for the Peruvian Ministry of Health",
+        "Developed integration systems for health institutions in Germany and a pilot ICU bed management system for the Peruvian Ministry of Health.",
+        "Contributed to system design, implementation, and maintenance, performing rigorous code reviews and debugging as part of a semi-senior role.",
+        "Collaborated with cross-functional teams to ensure seamless integration between frontend and backend services."
       ],
-      tools: ["Java 13", "Spring", "Spring Boot", "ReactJS", "MariaDB", "Material Design"]
+      tools: ["Java 13", "Spring Boot", "ReactJS", "MariaDB", "Material Design", "Docker", "Postman", "GitLab CI/CD"]
     },
     {
       company: "ANFA",
-      position: "Python | Odoo Developer",
+      position: "Python Full-Stack Developer",
       place: "Arequipa, Perú",
       from: "October 2020",
       to: "February 2021",
       specifications: [
-        "Development of a system for sending Invoices to SUNAT from SAP business one",
-        "Consuming a REST API and version control on Github",
+        "Developed a system to automate invoice submissions to SUNAT via SAP Business One, integrating RESTful APIs and leveraging GitHub for version control."
       ],
       tools: ["ODOO v12", "JavaEE v8", "QWeb", "PostgreSQL", "Bootstrap"]
     },
     {
       company: "Fundação Getulio Vargas (FGV)",
-      position: "Vizualization | Data researcher",
+      position: "Data Scientist",
       place: "Rio de Janeiro, Brazil",
       from: "June 2019",
       to: "October 2020",
       specifications: [
-        "Development of an interactive visualization system for Anomalies in space-time data (Data Science)",
+        "Created an interactive visualization platform for detecting spatio-temporal anomalies in data, enhancing decision-making processes."
       ],
-      tools: ["Django", "Django REST framework", "ReactJS", "D3.js", "Deck.gl", "react-map-gl", "Bootstrap", "pandas", "numpy", "numba", "altair", "plotly"]
+      tools: ["Django", "Django REST Framework", "ReactJS", "D3.js", "Deck.gl", "react-map-gl", "Bootstrap", "pandas", "numpy", "numba", "altair", "plotly"]
     },
     {
       company: "InkaLabs",
-      position: "Python Full-Stack Developer",
+      position: "Python-ReactJS Full-Stack Developer",
       place: "Arequipa, Perú",
       from: "June 2020",
       to: "September 2020",
       specifications: [
-        "Development of online sales system, payment gateway and development of investment control system, SCRUM development methodology",
+        "Designed and implemented an online sales system with an integrated payment gateway and investment control module, following SCRUM methodologies."
       ],
-      tools: ["ReactJS (Typescript y JavaScript)", "Django", "Django REST framework", "GraphQL"]
+      tools: ["ReactJS (TypeScript/JavaScript)", "Django", "Django REST Framework", "GraphQL"]
     },
     {
-      company: "Art Atlas Perú",
-      position: "Python | Odoo Developer",
+      company: "Art Atlas",
+      position: "Python Full-Stack Developer",
       place: "Arequipa, Perú",
       from: "March 2016",
       to: "April 2018",
       specifications: [
-        "Development of ERP systems for internal control of products and production of the company",
-        "Integration with SAP Business one through web service",
-        "reports and version management on Github.",
+        "Developed ERP systems for internal control of products and production management, integrating SAP Business One via web services.",
+        "Managed version control with GitHub and generated detailed operational reports."
       ],
-      tools: ["ODOO v8", "Java 7", "Java 8", "JavaEE", "SOAP", "QWeb", "Github"]
-    },
+      tools: ["ODOO v8", "Java 7/8", "JavaEE v8", "SOAP", "QWeb", "GitHub"]
+    }
   ];
 
   return (

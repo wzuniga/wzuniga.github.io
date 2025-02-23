@@ -24,6 +24,14 @@
     background-color: #16a085;
 }
 
+.day .numbered-heading {
+    color: #364152;
+}
+
+.night .numbered-heading {
+    color: white;
+}
+
 .innerBox {
     display: flex;
 }
@@ -57,6 +65,14 @@
     opacity: 0.7;
 }
 
+.day .buttonOption {
+  color: inherit;
+}
+
+.night .buttonOption {
+  color: rgb(211, 210, 210);
+}
+
 .buttonOption:hover {
     background-color: #4594b179;
 }
@@ -69,12 +85,25 @@
     opacity: 0.3;
 }
 
+.day .buttonOption::before {
+  color: grey;
+}
+
+.night .buttonOption::before {
+  color: rgb(211, 210, 210);
+}
+
 .activeButton {
     font-weight: bold;
     opacity: 1;
 }
 
-.activeButton::before {
+.day .activeButton::before {
+    color: #16a085;
+    opacity: 1;
+}
+
+.night .activeButton::before {
     color: #16a085;
     opacity: 1;
 }
@@ -84,6 +113,14 @@
     font-family: "Lato", sans-serif;
     padding-left: 100px;
     flex-grow: 1;
+}
+
+.day .infoContainer {
+  color: inherit;
+}
+
+.night .infoContainer {
+  color: rgb(211, 210, 210);
 }
 
 .h3Info {

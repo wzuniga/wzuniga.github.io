@@ -18,9 +18,9 @@ function App() {
   }, 4000);
 
   const getIp = async () => {
-    const response = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=c88615217b5e4c5d819f13193b856c3e');
-    const data = await response.json();
-    setIp(data);
+    // const response = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=c88615217b5e4c5d819f13193b856c3e');
+    // const data = await response.json();
+    // setIp(data);
   }
 
   const sendTrackBack = (page) => {

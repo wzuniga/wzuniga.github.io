@@ -4,3 +4,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.day .social__container a img {
+  /* Adjust filter values to approximate color #364152 */
+  filter: sepia(1) saturate(1000%) hue-rotate(160deg) brightness(0.3);
+}
+
+.night .social__container a img {
+  /* Invert colors to get white icons */
+  filter: grayscale(1) brightness(2);
+}

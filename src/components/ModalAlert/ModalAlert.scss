@@ -1,0 +1,52 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); // dimmer background
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-alert {
+  background: rgba(255, 255, 255, 0.95); // white with slight opacity
+  padding: 30px 20px; // more spacious padding
+  border-radius: 15px; // smoother rounded corners
+  max-width: 600px;
+  width: 90%;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  
+  h2 {
+    margin-top: 0;
+    font-size: 1.9rem; // increased font size
+  }
+  
+  ul {
+    list-style: disc inside;
+    margin: 20px 0;
+    font-size: 1rem;
+    line-height: 1.6; // improved line height for readability
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #16a085;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    display: block;
+    margin-left: auto; // button aligned to right
+    
+    &:hover {
+      background: #138b76;
+    }
+  }
+}
