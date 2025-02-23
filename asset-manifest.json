@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f34ada0.css",
-    "main.js": "/static/js/main.b32a0746.js",
+    "main.css": "/static/css/main.4e166959.css",
+    "main.js": "/static/js/main.d047f86e.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/incalpaca_1.png": "/static/media/incalpaca_1.caa96db67e860bba1887.png",
     "static/media/andean_1.png": "/static/media/andean_1.ed87fbe8f9f6da3a43f4.png",
@@ -18,7 +18,7 @@
     "static/media/scraping_5.png": "/static/media/scraping_5.46415bf3fe650610316c.png",
     "static/media/caseform_4.png": "/static/media/caseform_4.a96ba3b9da2bcffedd10.png",
     "static/media/remasur_4.png": "/static/media/remasur_4.362987c065669b926ea3.png",
-    "static/media/wzunigah.pdf": "/static/media/wzunigah.3c5a47306aa97e8ad1b3.pdf",
+    "static/media/wzunigah.pdf": "/static/media/wzunigah.2e6c61f4dfdbb597f7d1.pdf",
     "static/media/scraping_1.png": "/static/media/scraping_1.83fc63ed86bdcf4a1abd.png",
     "static/media/incalpaca_4.png": "/static/media/incalpaca_4.f9d49b767cd497758d35.png",
     "static/media/caseform_2.png": "/static/media/caseform_2.c033a9b805e5eb0f1a96.png",
@@ -32,12 +32,12 @@
     "static/media/linkedin.svg": "/static/media/linkedin.dd5993972bf6cc2e9019ca718cba6ccc.svg",
     "index.html": "/index.html",
     "static/media/github.svg": "/static/media/github.2dfdc2a8c6de3e9e19af4faee10b6bd8.svg",
-    "main.4f34ada0.css.map": "/static/css/main.4f34ada0.css.map",
-    "main.b32a0746.js.map": "/static/js/main.b32a0746.js.map",
+    "main.4e166959.css.map": "/static/css/main.4e166959.css.map",
+    "main.d047f86e.js.map": "/static/js/main.d047f86e.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f34ada0.css",
-    "static/js/main.b32a0746.js"
+    "static/css/main.4e166959.css",
+    "static/js/main.d047f86e.js"
   ]
 }
