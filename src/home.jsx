@@ -16,18 +16,18 @@ function Home({ passInitial, sendTrackBack }) {
 
   return (
     <div className={`generalContainer ${passInitial ? "showHome" : ""} ${theme}`}>
-      <Navigation sendTrackBack={sendTrackBack}/>
-      
+      <Navigation sendTrackBack={sendTrackBack} />
+
       <div className="containerInitial" id="home">
-        <div className="announcement">
+        {/* <div className="announcement">
           <span>🚧 This page is still under construction. Stay tuned for updates! (22/02/25) 🚧 V 1.2.6</span>
-        </div>
+        </div> */}
         <InitialGreeting />
         <SocialLinks />
       </div>
       <WhereIWorked />
       <Portfolio />
-      <ModalAlert /> {/* New modal alert component */}
+      {/* <ModalAlert /> */}
       <Footer />
       <div className="mailComponent">
         <div className="innerMailComponent">
