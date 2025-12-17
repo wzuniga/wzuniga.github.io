@@ -4,22 +4,27 @@
 
 .innerBoxPortfolio {
     display: flex;
-    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
-    justify-content: center; /* Centrar los elementos en pantallas pequeñas */
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    flex-wrap: wrap;
+    /* Permitir que los elementos se envuelvan */
+    justify-content: center;
+    /* Centrar los elementos en pantallas pequeñas */
+    width: 100%;
+    /* Ocupa todo el ancho de la pantalla */
 }
 
 .portfolioContainer {
-    padding: 15vh 15vw 15vh 15vw;
+    padding: 100px 5vw;
     color: white;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .day .portfolioContainer {
-  color: inherit;
+    color: inherit;
 }
 
 .night .portfolioContainer {
-  color: white;
+    color: white;
 }
 
 .portfolio-heading {
@@ -46,11 +51,11 @@
 }
 
 .day .portfolio-heading {
-  color: #364152;
+    color: #364152;
 }
 
 .night .portfolio-heading {
-  color: white;
+    color: white;
 }
 
 .imageCarousel {
@@ -58,19 +63,24 @@
 }
 
 .carouselContainer {
-    width: 50%; /* Ancho estándar */
-    flex: 1 1 300px; /* Comportamiento flexible: mínimo de 300px */
+    width: 50%;
+    /* Ancho estándar */
+    flex: 1 1 300px;
+    /* Comportamiento flexible: mínimo de 300px */
     height: auto;
     padding: 10px;
     box-sizing: border-box;
 }
 
 .infoCarousel {
-    max-width: 90%; /* Ajustar ancho */
-    flex: 1 1 300px; /* Comportamiento flexible: mínimo de 300px */
+    max-width: 90%;
+    /* Ajustar ancho */
+    flex: 1 1 300px;
+    /* Comportamiento flexible: mínimo de 300px */
     padding: 10px;
     box-sizing: border-box;
-    text-align: justify; /* Justificar texto */
+    text-align: justify;
+    /* Justificar texto */
 }
 
 .listInfoProject {
@@ -83,22 +93,29 @@
 
 /* Media queries para ajustar el diseño en pantallas más pequeñas */
 @media (max-width: 768px) {
-    .infoCarousel, .carouselContainer {
-        width: 100%; /* Ocupan todo el ancho */
-        text-align: justify; /* Justificar contenido */
+
+    .infoCarousel,
+    .carouselContainer {
+        width: 100%;
+        /* Ocupan todo el ancho */
+        text-align: justify;
+        /* Justificar contenido */
     }
 
     .infoCarousel ul {
-        padding: 0; /* Reducir espacios innecesarios */
+        padding: 0;
+        /* Reducir espacios innecesarios */
     }
 }
 
 @media (max-width: 480px) {
     .portfolio-heading {
-        font-size: 28px; /* Reducir el tamaño de fuente */
+        font-size: 28px;
+        /* Reducir el tamaño de fuente */
     }
 
     .imageCarousel {
-        height: 40vh; /* Reducir la altura del carrusel */
+        height: 40vh;
+        /* Reducir la altura del carrusel */
     }
 }
