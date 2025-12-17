@@ -25,11 +25,12 @@ import Scraping5 from "../../img/scraping_5.png";
 
 const portfolioDict = [
   {
-    name: "Scraping",
+    name: "Advanced Web Scraping",
     specifications: [
-      "System for the interconnection of patients with hospitals, nursing homes, rehabilitation centers in Germany.",
-      "Also developed for the Peruvian Ministry of Health, for ICU bed management.",
-      "I Contributed to the development of both front end and backend."
+      "Data extraction from US betting platforms like FanDuel and Caesars.",
+      "Real estate data mining from sources like Realtor.com and Homes.com.",
+      "Retrieving public government records and datasets.",
+      "Bypassing complex anti-bot protections including CAPTCHA, WAFs, and behavioral detection."
     ],
     images: [
       { img: Scraping1 },
@@ -42,9 +43,9 @@ const portfolioDict = [
   {
     name: "Caseform in Nubedian",
     specifications: [
-      "System for the interconnection of patients with hospitals, nursing homes, rehabilitation centers in Germany.",
-      "Also developed for the Peruvian Ministry of Health, for ICU bed management.",
-      "I Contributed to the development of both front end and backend."
+      "Developed a comprehensive system connecting patients with hospitals, nursing homes, and rehabilitation centers across Germany.",
+      "Adapted and deployed the platform for the Peruvian Ministry of Health to manage critical ICU bed availability.",
+      "Engineered secure full-stack solutions ensuring data privacy and high availability."
     ],
     images: [
       { img: Caseform1 },
@@ -54,12 +55,12 @@ const portfolioDict = [
     ]
   },
   {
-    name: "Andean",
+    name: "Andean - E-Commerce",
     specifications: [
-      "E-commerce system for selling alpaca fiber clothing.",
-      "User management with Django.",
-      "Payment gateway system using Sum up for creditcards.",
-      "I Contributed to the development of both front end and backend."
+      "Built a specialized e-commerce platform for high-end alpaca fiber clothing.",
+      "Implemented robust user management and authentication workflows using Django.",
+      "Integrated secure payment processing with SumUp for seamless credit card transactions.",
+      "Delivered end-to-end full-stack development, optimizing both UI/UX and backend performance."
     ],
     images: [
       { img: Andean1 },
@@ -70,12 +71,12 @@ const portfolioDict = [
     ]
   },
   {
-    name: "Incalpaca",
+    name: "Incalpaca International Store",
     specifications: [
-      "E-commerce system for selling alpaca fiber clothing in english and spanish.",
-      "User management with Django.",
-      "Payment gateway system using Sum up for creditcards.",
-      "I Contributed to the development of both front end and backend."
+      "Developed a bilingual (English/Spanish) e-commerce solution for a premium global brand.",
+      "Architected a scalable Django backend to handle complex inventory and user data.",
+      "Integrated custom payment gateways and checkout flows using SumUp.",
+      "Led full-stack development efforts to ensure a responsive and premium user experience."
     ],
     images: [
       { img: Incalpaca1 },
@@ -86,11 +87,11 @@ const portfolioDict = [
     ]
   },
   {
-    name: "REMASUR",
+    name: "REMASUR Enterprise System",
     specifications: [
-      "General purpose system for sending invoices, receipts and summaries to OSE of SUNAT.",
-      "User management in Odoo v12.",
-      "Connection module with SAP through stores in SQL server."
+      "Built an enterprise invoicing system compliant with SUNAT (OSE) regulations for digital tax receipts.",
+      "Customized Odoo v12 ERP to streamline resource planning and user management.",
+      "Engineered a high-performance synchronization module connecting SAP with SQL Server for real-time data integrity."
     ],
     images: [
       { img: Remasur1 },
