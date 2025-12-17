@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c9d5d9a1.css",
-    "main.js": "/static/js/main.836dd621.js",
+    "main.js": "/static/js/main.b5245ef1.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/incalpaca_1.png": "/static/media/incalpaca_1.caa96db67e860bba1887.png",
     "static/media/andean_1.png": "/static/media/andean_1.ed87fbe8f9f6da3a43f4.png",
@@ -33,11 +33,11 @@
     "index.html": "/index.html",
     "static/media/github.svg": "/static/media/github.2dfdc2a8c6de3e9e19af4faee10b6bd8.svg",
     "main.c9d5d9a1.css.map": "/static/css/main.c9d5d9a1.css.map",
-    "main.836dd621.js.map": "/static/js/main.836dd621.js.map",
+    "main.b5245ef1.js.map": "/static/js/main.b5245ef1.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c9d5d9a1.css",
-    "static/js/main.836dd621.js"
+    "static/js/main.b5245ef1.js"
   ]
 }
