@@ -1,25 +1,10 @@
 const workInfoDict = [
     {
-        company: "Coderland (FIFA)",
-        position: "Senior Backend Developer",
-        place: "Spain / Remote",
-        from: "June 2026",
-        to: "Present",
-        specifications: [
-            "Contribute to the end-to-end development and production delivery of a FIFA anti-doping platform, from technical analysis and backend architecture to deployment and production support.",
-            "Design and implement scalable microservices and REST APIs with Java 21 and Spring Boot, owning API contracts, business logic, data models and integrations.",
-            "Implement backend security (CSRF protection, session management, secure authentication integrated with FIFA's login ecosystem) and Redis-based caching.",
-            "Integrate services with external platforms such as Jira and Jumio, and work extensively with PostgreSQL.",
-            "Containerize services with Docker and take part in CI/CD and cloud deployments on AWS and Azure (EC2), writing automated tests and performing code reviews."
-        ],
-        tools: ["Java 21", "Spring Boot", "Microservices", "PostgreSQL", "Redis", "AWS", "Azure", "Docker", "CI/CD"]
-    },
-    {
         company: "Scanntech",
         position: "Java-Angular Full-Stack Developer",
         place: "Montevideo, Uruguay",
         from: "April 2023",
-        to: "June 2026",
+        to: "Present",
         specifications: [
             "Lead the design, development, and maintenance of scalable web applications, focusing on both frontend and backend optimizations.",
             "Implement new features and improvements while conducting thorough code reviews and ensuring adherence to industry best practices.",

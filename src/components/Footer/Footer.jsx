@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>© 2026 Walter Zuñiga. All rights reserved.</p>
+        <p>© 2023 Walter Zuñiga. All rights reserved.</p>
         <p>
           Contact: <a href="mailto:wzunigah@gmail.com">wzunigah@gmail.com</a>
         </p>

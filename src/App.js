@@ -7,7 +7,7 @@ import '@coreui/coreui/dist/css/coreui.min.css'
 function App() {
 
   const [passInitial, setPassInitial] = useState(false);
-  const [changeState, setChangeState] = useState(1);
+  const [changeState, setChangeState] = useState(0);
   const [userKey, setUserKey] = useState(undefined);
   const [ip, setIp] = useState({})
 
@@ -85,7 +85,7 @@ function App() {
   return (
     <>
       <Home passInitial={passInitial} sendTrackBack={sendTrackBack}/>
-      {/* <LoaderIcon passInitial={passInitial} /> */}
+      <LoaderIcon passInitial={passInitial} />
     </>
   );
 }

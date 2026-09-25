@@ -36,5 +36,3 @@ media
 
 .env
 backend/static/
-# local secrets
-token_windows.txt
