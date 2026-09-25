@@ -36,7 +36,7 @@
     height: 2px;
     /* Match Portfolio */
     margin-left: 20px;
-    background-color: #16a085;
+    background-color: var(--primary-color);
     /* Match Portfolio */
 }
 
@@ -45,7 +45,7 @@
 }
 
 .day .numbered-heading::after {
-    background-color: #16a085;
+    background-color: var(--primary-color);
 }
 
 .night .numbered-heading {
@@ -111,7 +111,7 @@
 
 .tabButton:hover,
 .tabButton:focus {
-    background-color: rgba(22, 160, 133, 0.1);
+    background-color: rgba(51, 138, 202, 0.1);
     color: var(--green);
     outline: none;
 }
@@ -125,7 +125,7 @@
 }
 
 .day .activeTab {
-    color: #16a085;
+    color: var(--primary-color);
 }
 
 .day .tabButton:hover {
@@ -140,7 +140,7 @@
     z-index: 10;
     width: 2px;
     height: 42px;
-    background: #16a085;
+    background: var(--primary-color);
     transform: translateY(0);
     transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     margin-left: -2px;
@@ -196,7 +196,7 @@
 }
 
 .tabPanel h3 .company {
-    color: #16a085;
+    color: var(--primary-color);
 }
 
 .range {
@@ -234,7 +234,7 @@
     content: "▹";
     position: absolute;
     left: 0;
-    color: #16a085;
+    color: var(--primary-color);
 }
 
 /* Technologies */
@@ -264,10 +264,10 @@
     padding: 5px 12px;
     margin-right: 10px;
     margin-bottom: 10px;
-    color: #16a085;
-    background: rgba(22, 160, 133, 0.1);
+    color: var(--primary-color);
+    background: rgba(51, 138, 202, 0.1);
     border-radius: 15px;
-    border: 1px solid rgba(22, 160, 133, 0.2);
+    border: 1px solid rgba(51, 138, 202, 0.2);
 }
 
 /* Responsive */
@@ -331,8 +331,8 @@
     }
 
     .tabButton.activeTab {
-        border-bottom: 2px solid #16a085;
-        color: #16a085;
+        border-bottom: 2px solid var(--primary-color);
+        color: var(--primary-color);
     }
 
     .tabContent {
@@ -353,7 +353,7 @@
         margin-bottom: 25px;
         font-family: monospace;
         font-size: 12px;
-        color: #16a085;
+        color: var(--primary-color);
         opacity: 0.8;
         pointer-events: none;
         animation: pulse 2s infinite;

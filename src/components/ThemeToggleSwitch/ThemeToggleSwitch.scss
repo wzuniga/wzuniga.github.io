@@ -59,7 +59,7 @@
   }
   
   input:checked + label {
-    background-color: #16a085;
+    background-color: var(--primary-color);
   }
   
   input:checked + label::before {

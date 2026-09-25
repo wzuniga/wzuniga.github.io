@@ -68,7 +68,7 @@
          content: "▹";
          position: absolute;
          left: 0;
-         color: #16a085; // Accent color from original file
+         color: var(--primary-color); // Accent color from original file
        }
      }
    }

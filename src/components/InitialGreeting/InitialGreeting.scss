@@ -8,7 +8,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Lato', sans-serif;
-    font-weight: 600;
+    font-weight: 100;
     height: auto;
     text-align: center;
     font-size: 5vw;
@@ -18,8 +18,10 @@
 
     &__object {
         display: inline;
-        color: #16a085;
+        color: var(--color-teal);
         font-size: 5vw;
+        padding: 5px 10px;
+        border-radius: 5px;
     }
 
     &__text {
@@ -40,7 +42,7 @@
     width: 11px;
     height: 11px;
     background-color: white;
-    border: 1px solid #16a085;
+    border: 1px solid var(--primary-color);
     box-sizing: border-box;
     display: none;
 }
@@ -73,7 +75,7 @@
 }
 
 .greeting__container:hover {
-    border: 1px solid #16a085;
+    border: 1px solid var(--primary-color);
 }
 
 .greeting__container:hover::before {

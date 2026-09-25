@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap');
+
+.python-greeting-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.python-greeting {
+  position: relative;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: clamp(46px, 2.5vw, 28px);
+  color: #ffffff;
+  padding: 30px 40px;
+  cursor: pointer;
+  max-width: 90vw;
+  text-align: left;
+  display: inline-block;
+  
+  @media (max-width: 768px) {
+    padding: 20px 25px;
+    font-size: clamp(14px, 3vw, 20px);
+  }
+}
+
+.python-line {
+  display: block;
+  margin-bottom: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--color-teal);
+  width: 0;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* First line animation */
+.python-line-1 {
+  animation: typing1 2s steps(24, end) forwards,
+             blink 0.75s step-end infinite;
+  animation-delay: 0.5s, 0.5s;
+}
+
+/* Second line animation */
+.python-line-2 {
+  animation: typing2 2.8s steps(35, end) 2.5s forwards,
+             blink 0.75s step-end 2.5s infinite;
+}
+
+/* Remove cursor after all typing completes */
+.python-line-1 {
+  animation: typing1 2s steps(24, end) 0.5s forwards,
+             blink 0.75s step-end 0.5s 3,
+             removeCursor 0s 5.3s forwards;
+}
+
+.python-line-2 {
+  animation: typing2 2.8s steps(35, end) 2.5s forwards,
+             blink 0.75s step-end 2.5s 3,
+             removeCursor 0s 5.3s forwards;
+}
+
+/* Color syntax highlighting */
+.python-keyword {
+  color: #ff79c6; /* Pink for keywords like 'print' */
+  font-weight: 500;
+}
+
+.python-parenthesis {
+  color: #f8f8f2; /* White for parenthesis */
+}
+
+.python-string {
+  color: #50fa7b; /* Green for strings */
+}
+
+.python-bold {
+  font-weight: 700;
+  color: #8be9fd; /* Cyan for emphasis */
+}
+
+/* Corner elements */
+.python-greeting::before,
+.python-greeting::after,
+.corner-top-right,
+.corner-bottom-left {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  background-color: white;
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+  display: none;
+}
+
+.python-greeting:hover::before,
+.python-greeting:hover::after,
+.python-greeting:hover .corner-top-right,
+.python-greeting:hover .corner-bottom-left {
+  display: block;
+}
+
+.python-greeting::before {
+  top: -6px;
+  left: -6px;
+}
+
+.python-greeting::after {
+  bottom: -6px;
+  right: -6px;
+}
+
+.corner-top-right {
+  top: -6px;
+  right: -6px;
+}
+
+.corner-bottom-left {
+  bottom: -6px;
+  left: -6px;
+}
+
+.python-greeting:hover {
+  border: 1px solid var(--primary-color);
+}
+
+/* Typing animations */
+@keyframes typing1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Cursor blink */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Remove cursor */
+@keyframes removeCursor {
+  to {
+    border-right: none;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .python-line {
+    margin-bottom: 12px;
+  }
+}
