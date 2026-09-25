@@ -1,21 +1,22 @@
-import React, { useContext } from "react";
+import React from "react";
 import './Home.css';
 //import StarrySky from "./components/sky/sky";
 //<StarrySky />
 import InitialGreeting from "./components/InitialGreeting/InitialGreeting"
 import SocialLinks from "./components/SocialLinks/SocialLinks"
 import Navigation from "./components/Navigation/Navigation"
+import AboutMe from "./components/AboutMe/AboutMe";
 import WhereIWorked from "./components/WhereIWorked/WhereIWorked";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Footer from "./components/Footer/Footer"; // new import
 import ModalAlert from "./components/ModalAlert/ModalAlert"; // new import
-import { ThemeContext } from './ThemeContext';
+import SpaceBackground from "./components/SpaceBackground/SpaceBackground";
 
 function Home({ passInitial, sendTrackBack }) {
-  const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={`generalContainer ${passInitial ? "showHome" : ""} ${theme}`}>
+    <div className={`generalContainer ${passInitial ? "showHome" : ""}`}>
+      <SpaceBackground />
       <Navigation sendTrackBack={sendTrackBack} />
 
       <div className="containerInitial" id="home">
@@ -25,6 +26,7 @@ function Home({ passInitial, sendTrackBack }) {
         <InitialGreeting />
         <SocialLinks />
       </div>
+      <AboutMe />
       <WhereIWorked />
       <Portfolio />
       {/* <ModalAlert /> */}

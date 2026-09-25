@@ -2,11 +2,20 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Draggable from "react-draggable";
 import "./InitialGreeting.scss";
+import { useLanguage } from "../../i18n/LanguageContext";
+
+// The greeting cycles through all three languages, starting with the selected one.
+const GREETING_ORDER = ["en", "es", "pt"];
 
 function InitialGreeting() {
-    const [greetingPosition, setGreetingPosition] = useState(0);
+    const { lang, t } = useLanguage();
+    const [greetingPosition, setGreetingPosition] = useState(GREETING_ORDER.indexOf(lang));
     const [greeting] = useState(["Hello! I'm: ", " ¡Hola! soy: ", "Oi! Eu sou: "]);
     const isMobile = window.innerWidth <= 768;
+
+    useEffect(() => {
+        setGreetingPosition(GREETING_ORDER.indexOf(lang));
+    }, [lang]);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -17,7 +26,7 @@ function InitialGreeting() {
 
     return (
         <Draggable defaultPosition={{ x: -(window.innerWidth / 2) , y: -(window.innerHeight / (isMobile ? 3 : 4))  }}>
-            <div className="greeting__container" title="Arrástrame">
+            <div className="greeting__container" title={t("greeting.drag")}>
                 <div className="corner-top-right"></div>
                 <div className="corner-bottom-left"></div>
                 <div className="greeting__container__object">{"@wzunigah:~$ {"}</div>

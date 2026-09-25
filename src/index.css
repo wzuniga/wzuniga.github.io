@@ -1,0 +1,8 @@
+/* The site only has the space (dark) theme, so the page itself is space-black
+   too: the initial fade-in then starts from black instead of white.
+   `html body` outranks CoreUI's later `body { background-color }` rule. */
+html,
+html body {
+  background-color: #040308;
+  color-scheme: dark;
+}

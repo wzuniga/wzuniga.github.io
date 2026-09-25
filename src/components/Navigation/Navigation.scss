@@ -29,11 +29,7 @@
     transition: background-size .3s;
 }
 
-.day .navigationContainer > ul > li > a {
-    color: #364152;
-}
-
-.night .navigationContainer > ul > li > a {
+.navigationContainer > ul > li > a {
     color: white;
 }
 
@@ -50,33 +46,67 @@
     z-index: 1;
 }
 
-.themeToggleButton {
-  float: left;
-  display: inline-block;
-  vertical-align: middle;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  background: transparent;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
-  font-size: 16px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-right: 15px;
+/* Language switcher (EN / ES / PT) */
+.navLang {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10px;
 }
 
-.themeToggleButton:hover {
-  background-color: rgba(22, 160, 133, 0.2);
+.langSwitcher {
+    display: inline-flex;
+    padding: 3px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(4, 3, 8, 0.45);
+    backdrop-filter: blur(6px);
+}
+
+.langSwitcher__option {
+    padding: 4px 10px;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: #ccd6f6;
+    font-family: monospace;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.langSwitcher__option:hover {
+    color: white;
+    background: rgba(22, 160, 133, 0.2);
+}
+
+.langSwitcher__option.is-active {
+    color: white;
+    background: #16a085;
+}
+
+.langSwitcher__option:focus-visible {
+    outline: 2px solid #1abc9c;
+    outline-offset: 1px;
 }
 
 @media (max-width: 768px) {
-    /* Only show the first and last <li> elements */
-    .navigationContainer > ul > li:not(:first-child):not(:last-child) {
+    /* On mobile only Home, Resume and the language switcher stay visible */
+    .navigationContainer > ul > li.navHideMobile {
         display: none;
     }
 
     .navigationContainer > ul {
         justify-content: space-between;
+        align-items: center;
         width: 100%;
+    }
+
+    .navigationContainer > ul > li {
+        margin: 0 4px;
+    }
+
+    .navLang {
+        padding-top: 8px;
     }
 }

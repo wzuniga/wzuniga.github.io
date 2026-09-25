@@ -36,3 +36,6 @@ media
 
 .env
 backend/static/
+# local-only files
+token_windows.txt
+.claude/

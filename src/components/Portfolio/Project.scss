@@ -1,151 +1,325 @@
- // Note: User didn't show variables file, I will stick to standard CSS or values seen in previous files.
+$accent: #16a085;
+$accent-light: #1abc9c;
 
- .project-card {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   margin-bottom: 80px;
-   padding: 40px;
-   background-color: rgba(255, 255, 255, 0.05); // Glassmorphism base
-   backdrop-filter: blur(10px);
-   border-radius: 20px;
-   border: 1px solid rgba(255, 255, 255, 0.1);
-   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
-   overflow: hidden;
+// ---------- Shared bits ----------
+.project-card__category {
+  margin: 0 0 10px;
+  font-family: monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent-light;
+}
 
-   &:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
-     border-color: rgba(255, 255, 255, 0.2);
-   }
+.project-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: #ccd6f6;
 
-   &--odd {
-     flex-direction: row;
+  &__period {
+    font-family: monospace;
+    font-size: 13px;
+    color: #8892b0;
+  }
+}
 
-     .project-card__content {
-       padding-right: 40px;
-     }
-   }
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
 
-   &--even {
-     flex-direction: row-reverse;
+  li {
+    padding: 4px 11px;
+    border-radius: 15px;
+    border: 1px solid rgba(22, 160, 133, 0.25);
+    background: rgba(22, 160, 133, 0.1);
+    font-family: monospace;
+    font-size: 12px;
+    color: $accent-light;
+  }
+}
 
-     .project-card__content {
-       padding-left: 40px;
-     }
-   }
+// ---------- Featured project (with gallery) ----------
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  margin-bottom: 60px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 
-   &__content {
-     flex: 1;
-     min-width: 300px;
-   }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+    border-color: rgba(22, 160, 133, 0.35);
+  }
 
-   &__title {
-     font-size: 2.5rem;
-     font-weight: 700;
-     margin-bottom: 2rem;
-     color: #fff; // Default for dark mode
-     background: linear-gradient(45deg, #fff, #a5a5a5);
-     -webkit-background-clip: text;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
-   }
+  &--odd {
+    flex-direction: row;
+  }
 
-   &__specs {
-     list-style: none;
-     padding: 0;
+  &--even {
+    flex-direction: row-reverse;
+  }
 
-     li {
-       margin-bottom: 1rem;
-       font-size: 1.1rem;
-       line-height: 1.6;
-       color: rgba(255, 255, 255, 0.8);
-       padding-left: 20px;
-       position: relative;
+  &__content {
+    flex: 1;
+    min-width: 0;
+  }
 
-       &::before {
-         content: "▹";
-         position: absolute;
-         left: 0;
-         color: #16a085; // Accent color from original file
-       }
-     }
-   }
+  &__title {
+    margin: 0 0 12px;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    background: linear-gradient(45deg, #fff, #a5a5a5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-   &__gallery {
-     flex: 1.2;
-     min-width: 300px;
-     border-radius: 12px;
-     overflow: hidden;
-     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-   }
+  &__summary {
+    margin: 0 0 18px;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: #ccd6f6;
+  }
 
-   &__image {
-     object-fit: cover;
-     height: 400px;
-     width: 100%;
-     transition: transform 0.5s ease;
+  &__specs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-     &:hover {
-       transform: scale(1.02);
-     }
-   }
+    li {
+      position: relative;
+      margin-bottom: 0.7rem;
+      padding-left: 20px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.75);
 
-   &__caption {
-     background: rgba(0, 0, 0, 0.7);
-     padding: 1rem;
-     border-radius: 8px;
-     backdrop-filter: blur(4px);
-   }
- }
+      &::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: $accent;
+      }
+    }
+  }
 
- // Light Mode Support
- .day .project-card {
-   background-color: #e9e9e9;
-   border-color: rgba(0, 0, 0, 0.05);
-   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+  &__gallery {
+    position: relative;
+    flex: 1.15;
+    min-width: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
 
-   &__title {
-     background: linear-gradient(45deg, #2c3e50, #4ca1af);
-     -webkit-background-clip: text;
-     background-clip: text;
-     -webkit-text-fill-color: transparent;
-   }
+  &__image {
+    object-fit: cover;
+    object-position: top center;
+    height: 400px;
+    width: 100%;
+  }
 
-   &__specs li {
-     color: #4a4a4a;
-   }
- }
+  &__count {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: rgba(4, 3, 8, 0.75);
+    font-family: monospace;
+    font-size: 12px;
+    color: white;
+    pointer-events: none;
+  }
+}
 
- // Mobile / Responsive
- @media (max-width: 992px) {
-   .project-card {
-     flex-direction: column !important; // Stack everything on smaller screens
-     padding: 30px 20px;
+// ---------- Case studies (generated cover) ----------
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
 
-     &__content {
-       width: 100%;
-       padding: 0 !important;
-       margin-bottom: 30px;
-       text-align: center;
-     }
+.case-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
-     &__gallery {
-       width: 100%;
-     }
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(22, 160, 133, 0.45);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
 
-     &__title {
-       font-size: 2rem;
-     }
+    .flow {
+      animation-duration: 0.9s;
+    }
+  }
 
-     &__image {
-       height: 300px;
-     }
+  &__cover {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-     &__specs {
-       text-align: left;
-       display: inline-block;
-     }
-   }
- }
+    .cover-art {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(4, 3, 8, 0.8);
+    font-family: monospace;
+    font-size: 11px;
+    color: #ccd6f6;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px 24px 24px;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    color: white;
+  }
+
+  &__summary {
+    margin: 0 0 14px;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #ccd6f6;
+  }
+
+  &__specs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      margin-bottom: 6px;
+      padding-left: 18px;
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: rgba(255, 255, 255, 0.7);
+
+      &::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: $accent;
+      }
+    }
+  }
+
+  .project-tools {
+    margin-top: auto;
+    padding-top: 18px;
+  }
+}
+
+// Animated "data flow" along diagram lines
+.cover-art .flow {
+  stroke-dasharray: 4 6;
+  animation: flow 1.8s linear infinite;
+}
+
+.cover-art .pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: coverPulse 1.8s ease-out infinite;
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+@keyframes coverPulse {
+  0% { opacity: 1; transform: scale(0.7); }
+  100% { opacity: 0; transform: scale(1.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cover-art .flow,
+  .cover-art .pulse {
+    animation: none;
+  }
+}
+
+// ---------- Responsive ----------
+@media (max-width: 992px) {
+  .project-card {
+    flex-direction: column !important;
+    gap: 28px;
+    padding: 28px 20px;
+
+    &__content,
+    &__gallery {
+      width: 100%;
+    }
+
+    &__title {
+      font-size: 1.7rem;
+    }
+
+    &__image {
+      height: 300px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card__image {
+    height: 220px;
+  }
+}

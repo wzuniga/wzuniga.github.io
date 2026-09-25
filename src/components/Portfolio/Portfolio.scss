@@ -1,121 +1,141 @@
-.firstPortfolio {
-    padding-top: 100px;
-}
-
-.innerBoxPortfolio {
-    display: flex;
-    flex-wrap: wrap;
-    /* Permitir que los elementos se envuelvan */
-    justify-content: center;
-    /* Centrar los elementos en pantallas pequeñas */
-    width: 100%;
-    /* Ocupa todo el ancho de la pantalla */
-}
+$accent: #16a085;
+$accent-light: #1abc9c;
 
 .portfolioContainer {
     padding: 100px 5vw;
     color: white;
     max-width: 1400px;
     margin: 0 auto;
-}
-
-.day .portfolioContainer {
-    color: inherit;
-}
-
-.night .portfolioContainer {
-    color: white;
+    font-family: "Lato", sans-serif;
 }
 
 .portfolio-heading {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     position: relative;
-    margin: 10px 0px 40px;
+    margin: 10px 0 20px;
     width: 100%;
     font-size: 35px;
     white-space: nowrap;
     color: white;
     font-family: "Lato", sans-serif;
+
+    &::after {
+        content: "";
+        display: block;
+        position: relative;
+        width: 90%;
+        height: 2px;
+        margin-left: 20px;
+        background-color: $accent;
+    }
 }
 
-.portfolio-heading::after {
-    content: "";
-    display: block;
-    position: relative;
-    width: 90%;
-    height: 2px;
-    margin-left: 20px;
-    background-color: #16a085;
+.portfolio-intro {
+    max-width: 760px;
+    margin: 0 0 28px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #a8b2d1;
+
+    span {
+        color: $accent-light;
+    }
 }
 
-.day .portfolio-heading {
-    color: #364152;
+// Filter chips
+.portfolio-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 48px;
 }
 
-.night .portfolio-heading {
-    color: white;
-}
+.portfolio-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.04);
+    color: #ccd6f6;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 
-.imageCarousel {
-    height: 60vh;
-}
-
-.carouselContainer {
-    width: 50%;
-    /* Ancho estándar */
-    flex: 1 1 300px;
-    /* Comportamiento flexible: mínimo de 300px */
-    height: auto;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.infoCarousel {
-    max-width: 90%;
-    /* Ajustar ancho */
-    flex: 1 1 300px;
-    /* Comportamiento flexible: mínimo de 300px */
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: justify;
-    /* Justificar texto */
-}
-
-.listInfoProject {
-    margin-top: 50px;
-}
-
-.sublistInfoProject {
-    margin-top: 20px;
-}
-
-/* Media queries para ajustar el diseño en pantallas más pequeñas */
-@media (max-width: 768px) {
-
-    .infoCarousel,
-    .carouselContainer {
-        width: 100%;
-        /* Ocupan todo el ancho */
-        text-align: justify;
-        /* Justificar contenido */
+    &:hover {
+        border-color: rgba(22, 160, 133, 0.6);
+        color: white;
     }
 
-    .infoCarousel ul {
-        padding: 0;
-        /* Reducir espacios innecesarios */
+    &.is-active {
+        border-color: $accent;
+        background: rgba(22, 160, 133, 0.18);
+        color: white;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $accent-light;
+        outline-offset: 2px;
+    }
+
+    &__count {
+        min-width: 20px;
+        padding: 1px 6px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        font-family: monospace;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    &.is-active &__count {
+        background: $accent;
+    }
+}
+
+.portfolio-subheading {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    margin: 20px 0 28px;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+
+    span {
+        font-family: monospace;
+        font-size: 13px;
+        font-weight: 400;
+        color: $accent-light;
     }
 }
 
 @media (max-width: 480px) {
     .portfolio-heading {
         font-size: 28px;
-        /* Reducir el tamaño de fuente */
     }
 
-    .imageCarousel {
-        height: 40vh;
-        /* Reducir la altura del carrusel */
+    .portfolio-intro {
+        font-size: 16px;
+    }
+
+    .portfolio-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin: 0 -5vw 36px;
+        padding: 0 5vw 6px;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .portfolio-filter {
+        flex: none;
     }
 }

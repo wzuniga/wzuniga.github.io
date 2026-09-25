@@ -1,0 +1,193 @@
+$accent: #16a085;
+
+// Same outer spacing as "Where I've worked"; the heading reuses .numbered-heading.
+.aboutContainer {
+  padding: 100px 5vw 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+
+  .about,
+  .numbered-heading {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .about__interest {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease, border-color 0.25s ease, background-color 0.25s ease;
+  }
+
+  &.is-visible {
+    .about,
+    .numbered-heading,
+    .about__interest {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+// Glass card, matching the experience and portfolio panels
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 40px;
+  margin-top: 30px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+
+  &__text p {
+    margin: 0 0 18px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #a8b2d1;
+
+    strong {
+      color: white;
+    }
+  }
+
+  &__hl {
+    color: $accent;
+  }
+
+  &__quote {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    border-left: 2px solid $accent;
+    color: #ccd6f6 !important;
+    font-style: italic;
+  }
+
+  &__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    margin: 28px 0 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(22, 160, 133, 0.35);
+      background: rgba(22, 160, 133, 0.08);
+    }
+  }
+
+  &__fact-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: $accent;
+  }
+
+  &__fact-label {
+    font-family: monospace;
+    font-size: 13px;
+    color: #ccd6f6;
+  }
+
+  &__interests {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__interest {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(4, 3, 8, 0.35);
+
+    &:hover {
+      border-color: rgba(22, 160, 133, 0.5);
+      background: rgba(22, 160, 133, 0.06);
+
+      .about__icon {
+        color: white;
+        background: rgba(22, 160, 133, 0.35);
+      }
+    }
+
+    h3 {
+      margin: 2px 0 6px;
+      font-size: 18px;
+      font-weight: 600;
+      color: white;
+    }
+
+    p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.55;
+      color: #a8b2d1;
+    }
+  }
+
+  &__icon {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    color: $accent;
+    background: rgba(22, 160, 133, 0.12);
+    border: 1px solid rgba(22, 160, 133, 0.3);
+    transition: color 0.25s ease, background-color 0.25s ease;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    padding: 28px 22px;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding-top: 60px;
+
+    .numbered-heading {
+      font-size: 1.6rem;
+    }
+  }
+
+  .about__text p {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aboutContainer .about,
+  .aboutContainer .numbered-heading,
+  .aboutContainer .about__interest {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
