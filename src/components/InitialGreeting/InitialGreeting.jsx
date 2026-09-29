@@ -11,7 +11,6 @@ function InitialGreeting() {
     const { lang, t } = useLanguage();
     const [greetingPosition, setGreetingPosition] = useState(GREETING_ORDER.indexOf(lang));
     const [greeting] = useState(["Hello! I'm: ", " ¡Hola! soy: ", "Oi! Eu sou: "]);
-    const isMobile = window.innerWidth <= 768;
 
     useEffect(() => {
         setGreetingPosition(GREETING_ORDER.indexOf(lang));
@@ -25,7 +24,7 @@ function InitialGreeting() {
     }, []);
 
     return (
-        <Draggable defaultPosition={{ x: -(window.innerWidth / 2) , y: -(window.innerHeight / (isMobile ? 3 : 4))  }}>
+        <Draggable defaultPosition={{ x: 0, y: 0 }}>
             <div className="greeting__container" title={t("greeting.drag")}>
                 <div className="corner-top-right"></div>
                 <div className="corner-bottom-left"></div>
