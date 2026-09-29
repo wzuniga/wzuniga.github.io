@@ -78,6 +78,7 @@ const portfolioDict = [
   {
     name: { en: "Advanced Web Scraping", es: "Web Scraping Avanzado", pt: "Web Scraping Avançado" },
     categories: ["automation", "data"],
+    related: "#posts", // the LinkedIn post series about this work
     summary: {
       en: "Large-scale data extraction pipelines for sports-betting platforms, real-estate listings and public government datasets.",
       es: "Pipelines de extracción de datos a gran escala para plataformas de apuestas deportivas, listados inmobiliarios y datos públicos de gobierno.",

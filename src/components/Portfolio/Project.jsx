@@ -55,6 +55,11 @@ export function FeaturedProject({ project, index }) {
           ))}
         </ul>
         <Tools tools={project.tools} />
+        {project.related && (
+          <a className="project-card__related" href={project.related}>
+            {t("portfolio.related")} →
+          </a>
+        )}
       </div>
 
       <div className="project-card__gallery">

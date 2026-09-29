@@ -135,6 +135,83 @@ const scenes = {
       <text x="96" y="210" fontSize="10" fontFamily="monospace" fill={W2}>checkout · payments</text>
     </>
   ),
+
+  // ---- LinkedIn posts ----
+
+  // Browser window -> injected POST -> MongoDB
+  scraper: (
+    <>
+      <rect x="40" y="55" width="170" height="130" rx="8" fill="rgba(4,3,8,0.7)" stroke={W2} />
+      <path d="M40 75 H210" stroke={W2} />
+      <circle cx="52" cy="65" r="3" fill={W2} /><circle cx="62" cy="65" r="3" fill={W2} /><circle cx="72" cy="65" r="3" fill={W2} />
+      {[0, 1, 2].map((i) => (
+        <g key={i}>
+          <rect x="54" y={88 + i * 30} width="36" height="22" rx="3" fill="rgba(255,255,255,0.1)" />
+          <path d={`M98 ${93 + i * 30} h86 M98 ${103 + i * 30} h56`} stroke={W2} strokeWidth="3" />
+        </g>
+      ))}
+      <text x="228" y="112" fontSize="10" fontFamily="monospace" fill={T}>POST /search</text>
+      <path className="flow" d="M214 120 H296" stroke={T} strokeWidth="1.6" />
+      <Database x={300} y={98} label="mongodb" />
+    </>
+  ),
+  // Two identical ("cloned") sites feeding the same scraper
+  clone: (
+    <>
+      {[0, 1].map((i) => (
+        <g key={i} transform={`translate(${40 + i * 26} ${48 + i * 26})`}>
+          <rect width="150" height="110" rx="8" fill="rgba(4,3,8,0.85)" stroke={i ? T : W2} />
+          <path d="M0 18 H150" stroke={i ? T2 : W2} />
+          <path d="M14 34 h60 M14 48 h100 M14 62 h80 M14 76 h96" stroke={W2} strokeWidth="3" />
+        </g>
+      ))}
+      <text x="72" y="206" fontSize="10" fontFamily="monospace" fill={W2}>same endpoints · no captcha</text>
+      <path className="flow" d="M222 130 H290" stroke={T} strokeWidth="1.6" />
+      <text x="298" y="116" fontSize="22" fontFamily="monospace" fill={T}>~10k</text>
+      <text x="298" y="136" fontSize="10" fontFamily="monospace" fill={W}>listings · 5 min</text>
+    </>
+  ),
+  // GraphQL schema graph with introspection query
+  graphql: (
+    <>
+      <polygon points="200,58 262,94 262,166 200,202 138,166 138,94" fill="none" stroke={T} strokeWidth="1.4" />
+      <path d="M200 58 L262 166 L138 166 Z" fill="none" stroke={T2} />
+      {[[200, 58], [262, 94], [262, 166], [200, 202], [138, 166], [138, 94]].map(([x, y]) => (
+        <circle key={`${x}-${y}`} cx={x} cy={y} r="6" fill="#070a12" stroke={T} strokeWidth="1.6" />
+      ))}
+      <text x="30" y="40" fontSize="10" fontFamily="monospace" fill={W}>{"{ __schema { types { name } } }"}</text>
+      <text x="290" y="130" fontSize="10" fontFamily="monospace" fill="#ff9b9b">introspection</text>
+      <text x="290" y="144" fontSize="10" fontFamily="monospace" fill="#ff9b9b">enabled</text>
+      <path className="flow" d="M60 50 C90 80 120 90 138 94" stroke={T2} />
+    </>
+  ),
+  // Natural-language question -> comparison table
+  chat: (
+    <>
+      <rect x="40" y="46" width="200" height="42" rx="12" fill="rgba(26,188,156,0.12)" stroke={T} />
+      <text x="54" y="72" fontSize="10" fontFamily="monospace" fill={W}>"3 bedrooms in Miraflores"</text>
+      <path className="flow" d="M140 92 V118" stroke={T} strokeWidth="1.6" />
+      <rect x="90" y="122" width="270" height="92" rx="8" fill="rgba(4,3,8,0.75)" stroke={W2} />
+      <path d="M90 144 H360 M90 167 H360 M90 190 H360 M180 122 V214 M270 122 V214" stroke={W2} />
+      <rect x="92" y="124" width="266" height="19" fill="rgba(26,188,156,0.15)" />
+      <text x="104" y="137" fontSize="9" fontFamily="monospace" fill={T}>district</text>
+      <text x="194" y="137" fontSize="9" fontFamily="monospace" fill={T}>price</text>
+      <text x="284" y="137" fontSize="9" fontFamily="monospace" fill={T}>floors</text>
+      <circle cx="300" cy="62" r="16" fill="none" stroke={W} strokeWidth="1.4" />
+      <text x="300" y="66" textAnchor="middle" fontSize="11" fontFamily="monospace" fill={W}>AI</text>
+    </>
+  ),
+  // CAPTCHA box being solved
+  captcha: (
+    <>
+      <rect x="80" y="62" width="240" height="96" rx="8" fill="rgba(4,3,8,0.8)" stroke={W2} />
+      <path d="M96 118 C120 96 140 132 170 108 S220 96 250 116 S290 104 304 112" stroke={W2} strokeWidth="1.2" />
+      <text x="112" y="120" fontSize="30" fontFamily="monospace" fill={W} transform="rotate(-4 200 110)" letterSpacing="6">x7Kq2</text>
+      <rect x="120" y="176" width="160" height="30" rx="6" fill="rgba(26,188,156,0.12)" stroke={T} />
+      <text x="200" y="195" textAnchor="middle" fontSize="11" fontFamily="monospace" fill={T}>solved ≈ 80%</text>
+      <path className="flow" d="M200 158 V176" stroke={T} strokeWidth="1.6" />
+    </>
+  ),
 };
 
 function CoverArt({ kind }) {

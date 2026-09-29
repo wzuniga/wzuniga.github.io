@@ -45,6 +45,9 @@ function Navigation({ sendTrackBack, external }) {
         <li className="navHideMobile" onClick={() => sendTrackBack("PORTFOLIO")}>
           <a href={`${base}#portfolio`}>{t("nav.portfolio")}</a>
         </li>
+        <li className="navHideMobile" onClick={() => sendTrackBack("POSTS")}>
+          <a href={`${base}#posts`}>{t("nav.posts")}</a>
+        </li>
         <li onClick={() => sendTrackBack("RESUME")}>
           <a href={Pdf} target="_blank" rel="noopener noreferrer">
             <DownloadIcon />{t("nav.resume")}

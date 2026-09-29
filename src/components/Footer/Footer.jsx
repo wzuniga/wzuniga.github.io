@@ -24,6 +24,7 @@ function Footer() {
           <a href="#about">{t("nav.about")}</a>
           <a href="#whereWorked">{t("nav.experience")}</a>
           <a href="#portfolio">{t("nav.portfolio")}</a>
+          <a href="#posts">{t("nav.posts")}</a>
           <a href={Pdf} target="_blank" rel="noopener noreferrer">{t("nav.resume")}</a>
         </nav>
 

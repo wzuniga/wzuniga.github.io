@@ -8,6 +8,7 @@ import Navigation from "./components/Navigation/Navigation"
 import AboutMe from "./components/AboutMe/AboutMe";
 import WhereIWorked from "./components/WhereIWorked/WhereIWorked";
 import Portfolio from "./components/Portfolio/Portfolio";
+import LinkedInPosts from "./components/LinkedInPosts/LinkedInPosts";
 import Footer from "./components/Footer/Footer"; // new import
 import ModalAlert from "./components/ModalAlert/ModalAlert"; // new import
 import SpaceBackground from "./components/SpaceBackground/SpaceBackground";
@@ -29,6 +30,7 @@ function Home({ passInitial, sendTrackBack }) {
       <AboutMe />
       <WhereIWorked />
       <Portfolio />
+      <LinkedInPosts />
       {/* <ModalAlert /> */}
       <Footer />
       <div className="mailComponent">

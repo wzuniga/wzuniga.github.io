@@ -1,0 +1,307 @@
+$accent: #16a085;
+$accent-light: #1abc9c;
+$linkedin: #0a66c2;
+
+// Same outer spacing as the other sections; the heading reuses .numbered-heading.
+.postsContainer {
+  padding: 40px 5vw 100px;
+  max-width: 1400px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.posts-intro {
+  max-width: 780px;
+  margin: 0 0 32px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #a8b2d1;
+}
+
+.posts-series {
+  margin: 0 0 18px;
+  font-family: monospace;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $accent-light;
+}
+
+.posts-grid {
+  display: grid;
+  gap: 22px;
+
+  &--series {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  &--single {
+    margin-top: 22px;
+
+    // the standalone post is shown wide: cover on the left, text on the right
+    .li-post {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr);
+    }
+
+    // keep the illustration whole (16:10) and centered instead of cropping it
+    .li-post__cover {
+      display: flex;
+      align-items: center;
+      aspect-ratio: auto;
+      background: #070a12;
+      border-bottom: none;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+      .cover-art {
+        height: auto;
+        aspect-ratio: 16 / 10;
+      }
+    }
+  }
+}
+
+.li-post {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(22, 160, 133, 0.45);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  &__cover {
+    position: relative;
+    display: block;
+    aspect-ratio: 16 / 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    .cover-art {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(22, 160, 133, 0.5);
+    background: rgba(4, 3, 8, 0.8);
+    font-family: monospace;
+    font-size: 11px;
+    color: $accent-light;
+
+    &--alt {
+      border-color: rgba(255, 155, 155, 0.5);
+      color: #ff9b9b;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px 22px 18px;
+  }
+
+  &__date {
+    font-family: monospace;
+    font-size: 12px;
+    color: #8892b0;
+  }
+
+  &__title {
+    margin: 6px 0 10px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.35;
+    color: white;
+  }
+
+  &__summary {
+    margin: 0 0 12px;
+    font-size: 0.93rem;
+    line-height: 1.6;
+    color: #ccd6f6;
+  }
+
+  &__takeaways {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      margin-bottom: 6px;
+      padding-left: 18px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.7);
+
+      &::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: $accent;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+
+    li {
+      font-family: monospace;
+      font-size: 12px;
+      color: #6fa8dc;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  &__tags + &__footer {
+    margin-top: 16px;
+  }
+
+  &__stats {
+    display: inline-flex;
+    gap: 14px;
+    font-size: 13px;
+    color: #a8b2d1;
+
+    > span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    font-weight: 600;
+    color: $accent-light;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Call to action: follow on LinkedIn
+.posts-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px 24px;
+  margin-top: 40px;
+
+  &__primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: $linkedin;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 24px -10px rgba(10, 102, 194, 0.8);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    &:hover {
+      color: white;
+      background: #0b76e0;
+      transform: translateY(-2px);
+    }
+  }
+
+  &__secondary {
+    color: #ccd6f6;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(204, 214, 246, 0.35);
+
+    &:hover {
+      color: $accent-light;
+      border-bottom-color: $accent-light;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .posts-grid--series {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .posts-grid--series {
+    grid-template-columns: 1fr;
+  }
+
+  .posts-grid--single {
+    .li-post {
+      display: flex;
+    }
+
+    .li-post__cover {
+      aspect-ratio: 16 / 10;
+      min-height: 0;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  .posts-intro {
+    font-size: 16px;
+  }
+}

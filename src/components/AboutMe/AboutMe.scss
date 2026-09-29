@@ -15,16 +15,9 @@ $accent: #16a085;
     transition: opacity 0.8s ease, transform 0.8s ease;
   }
 
-  .about__interest {
-    opacity: 0;
-    transform: translateX(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease, border-color 0.25s ease, background-color 0.25s ease;
-  }
-
   &.is-visible {
     .about,
-    .numbered-heading,
-    .about__interest {
+    .numbered-heading {
       opacity: 1;
       transform: none;
     }
@@ -33,19 +26,16 @@ $accent: #16a085;
 
 // Glass card, matching the experience and portfolio panels
 .about {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  gap: 40px;
   margin-top: 30px;
-  padding: 40px;
+  padding: 36px 40px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 
-  &__text p {
-    margin: 0 0 18px;
+  &__text {
+    margin: 0 0 16px;
     font-size: 17px;
     line-height: 1.7;
     color: #a8b2d1;
@@ -60,111 +50,85 @@ $accent: #16a085;
   }
 
   &__quote {
-    position: relative;
+    margin: 0 0 16px;
     padding: 4px 0 4px 18px;
     border-left: 2px solid $accent;
-    color: #ccd6f6 !important;
+    font-size: 17px;
     font-style: italic;
+    line-height: 1.65;
+    color: #ccd6f6;
   }
 
   &__facts {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     list-style: none;
-    margin: 28px 0 0;
+    margin: 24px 0 0;
     padding: 0;
 
     li {
       display: flex;
       align-items: baseline;
       gap: 8px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(22, 160, 133, 0.35);
-      background: rgba(22, 160, 133, 0.08);
+      padding: 8px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(4, 3, 8, 0.35);
     }
   }
 
   &__fact-value {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     color: $accent;
   }
 
   &__fact-label {
     font-family: monospace;
-    font-size: 13px;
+    font-size: 12px;
     color: #ccd6f6;
   }
 
   &__interests {
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 16px;
+    margin-top: 18px;
 
-  &__interest {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(4, 3, 8, 0.35);
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-    &:hover {
-      border-color: rgba(22, 160, 133, 0.5);
-      background: rgba(22, 160, 133, 0.06);
+    li {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(22, 160, 133, 0.35);
+      background: rgba(22, 160, 133, 0.08);
+      font-size: 13px;
+      color: #ccd6f6;
 
-      .about__icon {
-        color: white;
-        background: rgba(22, 160, 133, 0.35);
+      svg {
+        width: 15px;
+        height: 15px;
+        color: $accent;
       }
     }
-
-    h3 {
-      margin: 2px 0 6px;
-      font-size: 18px;
-      font-weight: 600;
-      color: white;
-    }
-
-    p {
-      margin: 0;
-      font-size: 15px;
-      line-height: 1.55;
-      color: #a8b2d1;
-    }
   }
 
-  &__icon {
-    flex: none;
-    display: grid;
-    place-items: center;
-    width: 46px;
-    height: 46px;
-    border-radius: 12px;
-    color: $accent;
-    background: rgba(22, 160, 133, 0.12);
-    border: 1px solid rgba(22, 160, 133, 0.3);
-    transition: color 0.25s ease, background-color 0.25s ease;
-
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .about {
-    grid-template-columns: 1fr;
-    padding: 28px 22px;
-    gap: 28px;
+  &__interests-label {
+    font-family: monospace;
+    font-size: 13px;
+    color: #8892b0;
   }
 }
 
@@ -177,15 +141,19 @@ $accent: #16a085;
     }
   }
 
-  .about__text p {
-    font-size: 16px;
+  .about {
+    padding: 26px 22px;
+
+    &__text,
+    &__quote {
+      font-size: 16px;
+    }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .aboutContainer .about,
-  .aboutContainer .numbered-heading,
-  .aboutContainer .about__interest {
+  .aboutContainer .numbered-heading {
     opacity: 1;
     transform: none;
     transition: none;
